@@ -66,13 +66,21 @@ var Frosty= new Target("frosty", 100)
 function Target(name, health){
     this.name= name;
     this.health= health;
+    this.hits=0;
     this.items = []
 }
 
-function giveShield(){
+function protect(){
     console.log("gave Shield")
 }
 
+function slice(){
+
+}
+
+function melt(){
+    
+}
 update()
 
 
