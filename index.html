@@ -9,9 +9,9 @@
         crossorigin="anonymous">
     <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo
         " crossorigin="anonymous "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js " integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js " integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ
         " crossorigin="anonymous "></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js " integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js " integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm
         " crossorigin="anonymous "></script>
     <link rel="stylesheet" href="assets/styles.css">
 
@@ -22,28 +22,44 @@
     <section class="container">
         <div class="row">
             <div class="col">
-                <h1>Don't slap my Snowman!!</h1>
-                <img src="assets/snowmangetslapped.gif" alt="">     
+                <h1>Please don't slap my Snowman!!</h1>
+                <img src="assets/snowmangetslapped.gif" alt="">
             </div>
             <div class="col">
                 <div class="row">
-                    <span>Health:<span id="health">--</span></span></div>
-                    <div class="row">
-                        <span>Name:<span id="name">--</span></span></div>
-                        <div class="row">
-                            <span>Hits:<span id="hits">--</span></span></div>
-                            <p>myModifiers</p>
-                            <button onclick="protect()">Shield</button>
-                            <button onclick="slice()">Sword</button>
+                    <span>Health:
+                        <span id="health">--</span>
+                    </span>
+                </div>
+                <div class="row">
+                    <span>Name:
+                        <span id="name">--</span>
+                    </span>
+                </div>
+                <div class="row">
+                    <span>Hits:
+                        <span id="hits">--</span>
+                    </span>
+                </div>
+                <h5>Other snowman modifiers..</h5>
+                <span>
+                    <button onclick="protect()">Shield</button>
+                    <span id="protect"></span>
+                    <span>
+                        <button onclick="slice()">Sword</button>
+                        <span id="slice"></span>
+                        <span>
                             <button onclick="melt()">Campfire</button>
-                            /* onclick='globals.modify'>modify</div>button
-                
-            </div>
+                            <span id="melt"></span>
+                        <button onclick='globals.modify'>  </div>
+
+        </div>
         </div>
         <footer>
             <button onclick="slap()">Slap</button>
             <button onclick="punch()">Punch</button>
             <button onclick="kick()">Kick</button>
+            <span id= "reset"><button onclick="reset">Reset</button></span>
         </footer>
 
     </section>
