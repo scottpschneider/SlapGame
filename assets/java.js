@@ -1,4 +1,4 @@
-var targetName = 'Frosty'
+var Name = 'Frosty'
 var health = 100
 var hits = 0
 
@@ -9,34 +9,43 @@ because my functions will utilize them here in my js doc.
 function slap()*/
 function update() {
     if (health <= 10) {
-        targetName = 'melty'
+        Name = 'melty'
         health = 0
     }
     document.getElementById("health").innerText = health.toString();
     document.getElementById('hits').innerText = hits.toString();
-    document.getElementById('name').innerText = name;
+    document.getElementById('name').innerText = Name;
     /*the update function keeps track of how low the health gets per hit and kick, etc. Since i have defined what happens when health
     equals zero, first i just had the health at zero when it equaled zero.. then i later on added a modification to the name function
     so if the health equals zero he is melty.  */
 }
 
-
-//TODO: reset function will return health to 100,and hits0
-
 function slap() {
-    health = health - 1
+    health = health - 1,
+        hits = hits + 1
     update()
 }
 
 function punch() {
-    health = health - 5
+    health = health - 5,
+        hits = hits + 1
     update()
 }
 
 function kick() {
-    health = health -= 10
+    health = health -= 10,
+        hits = hits + 1
     update()
 }
+function reset() {
+    health = 100,
+        hits = 0
+    update()
+}
+/*So what made the difference on my reset function was first moving it beneath
+other functions, slap, punch, kick.. Then i had it set equals to var+0, way overthinking.
+just simply needed to set reset to actual amounts. */
+
 
 function Item(name, modifier, description) {
     this.name = name;
@@ -47,7 +56,7 @@ function Item(name, modifier, description) {
 var items = {
     shield: new Item("Shield", 0.3, "This is an awesome shield!"),
     sword: new Item("Sword", 2.5, "This sword will slice you in half, almost..scratch you really."),
-    campfire: new Item("campfire", 25, "I am a campfire, will turn you into water..fast")
+    campfire: new Item("Campfire", 25, "I am a campfire, will turn you into water..fast")
 }
 
 var Frosty = new Target("frosty", 100)
@@ -70,28 +79,26 @@ var modifiers = {
 }
 
 function protect() {
-    health = health +=10
+    health = health += 10,
+        hits = hits - 1,
         me.modifiers.push(modifiers.protect),
         update()
-    }
+}
 
 function slice() {
-    health = health -=20
-    me.modifiers.push(modifiers.slice),
-    update()
+    health = health -= 20,
+        hits = hits + 1,
+        me.modifiers.push(modifiers.slice),
+        update()
 }
 
 function melt() {
-    health = health -=40
-    me.modifiers.push(modifiers.melt),
-    update()
+    health = health -= 40,
+        hits = hits + 1,
+        me.modifiers.push(modifiers.melt),
+        update()
 }
 
-function reset() {
-    health = 100
-    hits = 0
-    update()
-}
 
 update()
 

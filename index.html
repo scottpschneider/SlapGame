@@ -19,30 +19,32 @@
 </head>
 
 <body>
+    <header>
+        <h1>Please don't slap my Snowman!!</h1>
+    </header>
     <section class="container">
         <div class="row">
-            <div class="col">
-                <h1>Please don't slap my Snowman!!</h1>
-                <img src="assets/snowmangetslapped.gif" alt="">
+        <div class="col">
+                <span>Health:
+                    <span id="health">--</span>
+                </span>
             </div>
             <div class="col">
-                <div class="row">
-                    <span>Health:
-                        <span id="health">--</span>
-                    </span>
-                </div>
-                <div class="row">
-                    <span>Name:
-                        <span id="name">--</span>
-                    </span>
-                </div>
-                <div class="row">
-                    <span>Hits:
-                        <span id="hits">--</span>
-                    </span>
-                </div>
-                <h5>Other snowman modifiers..</h5>
-                <span>
+                <span>Name:
+                    <span id="name">--</span>
+                </span>
+            </div>
+            <div class="col">
+                <span>Hits:
+                    <span id="hits">--</span>
+                </span>
+            </div>
+        <div class="row">
+            <div class="col">
+                <img src="assets/snowmangetslapped.gif" alt="">
+            </div>
+            <span>
+                    <h5>Other snowman modifiers..</h5>
                     <button onclick="protect()">Shield</button>
                     <span id="protect"></span>
                     <span>
@@ -51,15 +53,18 @@
                         <span>
                             <button onclick="melt()">Campfire</button>
                             <span id="melt"></span>
-                        <button onclick='globals.modify'>  </div>
-
+                            <button onclick='globals.modify'>
+                            </div>
+                                
         </div>
         </div>
         <footer>
             <button onclick="slap()">Slap</button>
             <button onclick="punch()">Punch</button>
             <button onclick="kick()">Kick</button>
-            <span id= "reset"><button onclick="reset">Reset</button></span>
+            <span id="reset"></span>
+                <button onclick="reset()">Reset</button>
+            </span>
         </footer>
 
     </section>
