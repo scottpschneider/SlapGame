@@ -1,15 +1,30 @@
 body{
-    background-color: aqua;
+    background-color: aquamarine;
     border: black; 
     width: 600px;
     height: 200px;   
 }
-/*
-h1{
-    color: blue;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+.styled{
     text-align: center;
 }
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+h1{
+    color: blue;
+    font-family: franklin gothic medium;
+    text-align: center;
+}
+h5{
+    color: darkblue;
+    font-family: fantasy;
+    text-align: center;
+}
+/*
 p{
     font-family: verdana;
     font-size: 20px;

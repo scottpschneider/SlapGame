@@ -20,54 +20,52 @@
 
 <body>
     <header>
-        <h1>Please don't slap my Snowman!!</h1>
-    </header>
-    <section class="container">
+        <section class="container"></section>
         <div class="row">
-        <div class="col">
+            <h1> So you want to destroy a Snowman?!!</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
                 <span>Health:
                     <span id="health">--</span>
                 </span>
             </div>
-            <div class="col">
+            <div class="col-md-4">
                 <span>Name:
                     <span id="name">--</span>
                 </span>
             </div>
-            <div class="col">
+            <div class="col-md-4">
                 <span>Hits:
                     <span id="hits">--</span>
                 </span>
             </div>
+    </header>
+    <section class="container-fluid">
         <div class="row">
-            <div class="col">
-                <img src="assets/snowmangetslapped.gif" alt="">
-            </div>
-            <span>
-                    <h5>Other snowman modifiers..</h5>
-                    <button onclick="protect()">Shield</button>
-                    <span id="protect"></span>
-                    <span>
+                <h5>Or you could also..</h5>
+                <button onclick="protect()">Shield</button>
                         <button onclick="slice()">Sword</button>
                         <span id="slice"></span>
-                        <span>
                             <button onclick="melt()">Campfire</button>
                             <span id="melt"></span>
                             <button onclick='globals.modify'>
-                            </div>
-                                
+                                <div class="row">
+                                        <img src="assets/snowmangetslapped.gif" class=.img-fluid" alt="Responsive image">
+                                </div>
         </div>
         </div>
-        <footer>
+    </section>
+        <footer class="styled">
+            <h3>Method of Destruction</h3>
             <button onclick="slap()">Slap</button>
             <button onclick="punch()">Punch</button>
             <button onclick="kick()">Kick</button>
             <span id="reset"></span>
-                <button onclick="reset()">Reset</button>
+            <button onclick="reset()">Reset</button>
             </span>
         </footer>
 
-    </section>
     <script src="assets/java.js"></script>
 </body>
 
